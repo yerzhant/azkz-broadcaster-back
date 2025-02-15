@@ -1,0 +1,10 @@
+app:
+  username: ${username}
+  password: ${password}
+
+spring:
+  application:
+    name: radio
+
+server:
+  shutdown: graceful
