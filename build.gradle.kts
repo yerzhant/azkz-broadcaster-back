@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "kz.azan"
-version = "0.0.1-SNAPSHOT"
+version = System.getenv("BACKEND_VERSION")
 
 java {
     toolchain {
@@ -76,4 +76,10 @@ kotlin {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.bootBuildImage {
+    docker {
+        imageName = "reg.azan.kz/radio/back:${version}"
+    }
 }
