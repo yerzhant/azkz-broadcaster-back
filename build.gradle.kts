@@ -80,6 +80,6 @@ tasks.withType<Test> {
 
 tasks.bootBuildImage {
     docker {
-        imageName = "reg.azan.kz/radio/back:${version}"
+        imageName = "reg.azan.kz/radio-back:${version}"
     }
 }
