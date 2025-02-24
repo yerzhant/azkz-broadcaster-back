@@ -81,5 +81,6 @@ tasks.withType<Test> {
 tasks.bootBuildImage {
     docker {
         imageName = "reg.azan.kz/radio-back:${version}"
+        publish = true
     }
 }
